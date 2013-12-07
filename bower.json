@@ -1,0 +1,17 @@
+{
+  "name": "chome",
+  "version": "0.0.0",
+  "authors": [
+    "Chris Johnson <chris@cjohnson.io>"
+  ],
+  "description": "personal repository of chris",
+  "license": "MIT",
+  "homepage": "home.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
