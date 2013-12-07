@@ -159,3 +159,18 @@ func Compile(root string, shortname string) string {
 		return ""
 	}
 }
+
+func findPublicPost(filename string) (string, error) {
+	manifest, err := golang_blog.Manifest()
+
+	if err == nil {
+		for _, post := range manifest {
+			if post.Public && filename == post.Shortname {
+				var postPath = path.Join(golang_blog.BLOG_TARGET, "out", post.Shortname+".html")
+				return postPath, nil
+			}
+		}
+	}
+
+	return "", err
+}
