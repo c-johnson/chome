@@ -1,4 +1,4 @@
-package golang_blog
+package generator
 
 import (
 	"bytes"
@@ -15,14 +15,21 @@ import (
 
 var _ = crc64.MakeTable
 
-/* Makes sure envioronment variables are set:
-BLOG_SRC
-BLOG_WEB
-BLOG_TARGET
-*/
-func init() {
-	Initialize()
-}
+var (
+	gopath      = os.Getenv("GOPATH")
+	APP_ROOT    = path.Join(gopath, "src/chome")
+	PUBLIC_ROOT = path.Join(APP_ROOT, "public")
+	BLOG_OUT    = path.Join(PUBLIC_ROOT, "out")
+	BLOG_ROOT   = os.Getenv("BLOG_ROOT")
+)
+
+// func init() {
+// 	var gopath = os.Getenv("GOPATH")
+// 	var APP_ROOT = path.Join(gopath, "src/chome")
+// 	var PUBLIC_ROOT = path.Join(APP_ROOT, "public")
+// 	var BLOG_OUT = path.Join(PUBLIC_ROOT, "out")
+// 	var BLOG_ROOT = os.Getenv("BLOG_ROOT")
+// }
 
 type post struct {
 	Title       string
@@ -48,7 +55,7 @@ type test struct {
 	date time.Time
 }
 
-/* This is the root of the function that will be called on a CRON / Save file basis which translates .md files into static pages and generates metadata around files in your BLOG_SRC directory */
+/* This is the root of the function that will be called on a CRON / Save file basis which translates .md files into static pages and generates metadata around files in your BLOG_ROOT directory */
 func Generate(manifest bool) {
 	if manifest {
 		SaveManifest()
@@ -71,10 +78,10 @@ func PublicPosts() (posts []post, err error) {
 	return
 }
 
-/* This function scans the manifest file looking for public posts, creating a .html file in the BLOG_TARGET directory for each one */
+/* This function scans the manifest file looking for public posts, creating a .html file in the BLOG_OUT directory for each one */
 func GenerateHtml() {
-	posts_src := path.Join(BLOG_SRC)
-	posts_target := path.Join(BLOG_TARGET, "out")
+	posts_src := path.Join(BLOG_ROOT)
+	posts_target := path.Join(BLOG_OUT, "out")
 	os.MkdirAll(posts_target, os.ModePerm)
 	posts, err := PublicPosts()
 	if err == nil {
@@ -93,7 +100,7 @@ func GenerateHtml() {
 
 /* Retrieves the manifest file as a byte slice, used in some obscure function */
 func ManifestBytes() ([]byte, error) {
-	fullpath := path.Join(BLOG_TARGET, "manifest.json")
+	fullpath := path.Join(BLOG_OUT, "manifest.json")
 	return ioutil.ReadFile(fullpath)
 }
 
@@ -109,7 +116,7 @@ func Manifest() ([]post, error) {
 	return posts, err
 }
 
-/* Writes the manifest object into a .json file in the BLOG_TARGET directory */
+/* Writes the manifest object into a .json file in the BLOG_OUT directory */
 func WriteManifest(posts_target string, manifest []post) {
 	os.MkdirAll(posts_target, os.ModePerm)
 	manifestPath := path.Join(posts_target, "manifest.json")
@@ -128,9 +135,9 @@ func WriteManifest(posts_target string, manifest []post) {
 	}
 }
 
-/* Gathers the metadata from files in BLOG_SRC, then calls WriteManifest to persist it */
+/* Gathers the metadata from files in BLOG_ROOT, then calls WriteManifest to persist it */
 func SaveManifest() {
-	postsData, _ := ioutil.ReadDir(BLOG_SRC)
+	postsData, _ := ioutil.ReadDir(BLOG_ROOT)
 
 	manifest := make([]post, 1)
 
@@ -139,7 +146,7 @@ func SaveManifest() {
 		manifest = append(manifest, newPost)
 	}
 
-	WriteManifest(BLOG_TARGET, manifest)
+	WriteManifest(BLOG_OUT, manifest)
 }
 
 func Shortname(str string) string {
@@ -161,12 +168,12 @@ func Compile(root string, shortname string) string {
 }
 
 func findPublicPost(filename string) (string, error) {
-	manifest, err := golang_blog.Manifest()
+	manifest, err := Manifest()
 
 	if err == nil {
 		for _, post := range manifest {
 			if post.Public && filename == post.Shortname {
-				var postPath = path.Join(golang_blog.BLOG_TARGET, "out", post.Shortname+".html")
+				var postPath = path.Join(BLOG_OUT, "out", post.Shortname+".html")
 				return postPath, nil
 			}
 		}
