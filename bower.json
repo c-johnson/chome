@@ -8,9 +8,9 @@
   "description": "personal repository of chris",
   "license": "MIT",
   "homepage": "home.html",
-  "dependencies": [
-    "angular", "1.2.4"
-  ],
+  "dependencies": {
+    "angular": "1.2.4"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
