@@ -9,7 +9,9 @@
   "license": "MIT",
   "homepage": "home.html",
   "dependencies": {
-    "angular": "1.2.4"
+    "angular": "~1.2.4",
+    "foundation": "~5.0.2",
+    "requirejs": "~2.1.9"
   },
   "ignore": [
     "**/.*",
