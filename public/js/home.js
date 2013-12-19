@@ -1,1 +1,1 @@
-alert('home!');
+console.log('loaded homepage');

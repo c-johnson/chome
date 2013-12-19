@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/robfig/revel"
 	"github.com/russross/blackfriday"
 	"hash/crc64"
 	"io/ioutil"
@@ -24,11 +25,11 @@ var (
 )
 
 // func init() {
-// 	var gopath = os.Getenv("GOPATH")
-// 	var APP_ROOT = path.Join(gopath, "src/chome")
-// 	var PUBLIC_ROOT = path.Join(APP_ROOT, "public")
-// 	var BLOG_OUT = path.Join(PUBLIC_ROOT, "out")
-// 	var BLOG_ROOT = os.Getenv("BLOG_ROOT")
+//  var gopath = os.Getenv("GOPATH")
+//  var APP_ROOT = path.Join(gopath, "src/chome")
+//  var PUBLIC_ROOT = path.Join(APP_ROOT, "public")
+//  var BLOG_OUT = path.Join(PUBLIC_ROOT, "out")
+//  var BLOG_ROOT = os.Getenv("BLOG_ROOT")
 // }
 
 type post struct {
@@ -57,6 +58,7 @@ type test struct {
 
 /* This is the root of the function that will be called on a CRON / Save file basis which translates .md files into static pages and generates metadata around files in your BLOG_ROOT directory */
 func Generate(manifest bool) {
+	revel.INFO.Printf("Generating!")
 	if manifest {
 		SaveManifest()
 	}
@@ -167,7 +169,7 @@ func Compile(root string, shortname string) string {
 	}
 }
 
-func findPublicPost(filename string) (string, error) {
+func FindPublicPost(filename string) (string, error) {
 	manifest, err := Manifest()
 
 	if err == nil {
