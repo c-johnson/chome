@@ -4,7 +4,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          src: ['app/assets/css/*.scss'],
+          src: ['app/assets/css/**/*.scss'],
           dest: 'public/css',
           flatten: true,
           ext: '.css'
@@ -12,15 +12,41 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          src: ['app/assets/js/**/*.js'],
+          dest: 'public/js',
+          flatten: true,
+          ext: '.js'
+        }]
+      }
+    },
+
+    // uglify: {
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       src: ['app/assets/js/**/*.js'],
+    //       dest: 'public/js',
+    //       flatten: true,
+    //       ext: '.js'
+    //     }]
+    //   }
+    // },
+
     watch: {
       scripts: {
         files: "app/assets/css/*.scss",
-        tasks: ["sass"]
+        tasks: ["default"]
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['sass']);
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.registerTask('default', ['sass', 'copy']);
 };

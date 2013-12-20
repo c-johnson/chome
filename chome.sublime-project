@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/chris/chome/gowrk/src/chome",
+      "folder_exclude_patterns": ["public", "app/routes", "app/tmp"],
+      "file_exclude_patterns": ["chome.sublime-workspace", "D"]
+		}
+	]
+}
