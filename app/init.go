@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/dre1080/revel-grunt"
+	// "github.com/dre1080/revel-grunt"
 	"github.com/robfig/revel"
 )
 
@@ -20,6 +20,6 @@ func init() {
 		revel.ActionInvoker,           // Invoke the action.
 	}
 
-	revel.OnAppStart(grunt.AppInit)
+	// revel.OnAppStart(grunt.AppInit)
 
 }
