@@ -1,4 +1,10 @@
-<!--This sets the baseUrl to the "scripts" directory, and
-    loads a script that will have a module ID of 'main'-->
-<script data-main="public/js/main.js" src="public/bowerc/requirejs/require.js"></script>
-<h1>Helloff!</h1>
+{{set . "title" "World of Chris"}}
+{{template "head.html" .}}
+
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <h1>Chris Johnson</h1>
+  </div>
+</div>
+
+{{template "footer.html" .}}

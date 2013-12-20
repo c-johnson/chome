@@ -19,19 +19,27 @@ module.exports = function(grunt) {
 
     copy: {
       dist: {
-        files: [{
-          expand: true,
-          src: ['app/assets/js/**/*.js'],
-          dest: 'public/js',
-          flatten: true,
-          ext: '.js'
-        }]
+        files: [
+          {
+            expand: true,
+            src: ['app/assets/js/**/*.js'],
+            dest: 'public/js',
+            flatten: true,
+            ext: '.js'
+          },
+          {
+            expand: true,
+            src: ['app/assets/img/**/*'],
+            dest: 'public/img',
+            flatten: true
+          },
+        ]
       }
     },
 
     watch: {
       scripts: {
-        files: "app/assets/css/*.scss",
+        files: ["app/assets/**/*"],
         tasks: ["default"]
       }
     }

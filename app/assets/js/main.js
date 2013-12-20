@@ -1,12 +1,15 @@
 require.config({
   baseUrl: "public/js",
   paths: {
-    "angular": "../bowerc/angular/angular"
+    "angular": "../bowerc/angular/angular",
+    "jquery": "../bowerc/jquery/jquery"
   },
   waitSeconds: 15
 });
 
 require( ["angular", "home"],
 function(home) {
+
   console.log('loaded all modules');
+
 });
