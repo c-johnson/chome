@@ -2,6 +2,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     sass: {
       dist: {
+        options: {
+          includePaths: [
+            "public/bowerc"
+          ]
+        },
         files: [{
           expand: true,
           src: ['app/assets/css/**/*.scss'],
@@ -23,18 +28,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-
-    // uglify: {
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       src: ['app/assets/js/**/*.js'],
-    //       dest: 'public/js',
-    //       flatten: true,
-    //       ext: '.js'
-    //     }]
-    //   }
-    // },
 
     watch: {
       scripts: {
