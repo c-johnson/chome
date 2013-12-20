@@ -1,6 +1,5 @@
 test-results/
 tmp/
 routes/
-public/posts/
-public/bowerc
+public/
 node_modules/
