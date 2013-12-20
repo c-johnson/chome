@@ -3,3 +3,5 @@ tmp/
 routes/
 public/
 node_modules/
+.DS_Store
+chome.sublime-workspace
