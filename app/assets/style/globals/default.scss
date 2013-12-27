@@ -1,0 +1,9 @@
+@import "globals/vars";
+@import "default/aux";
+
+body * {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+}

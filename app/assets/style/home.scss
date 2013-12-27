@@ -1,0 +1,10 @@
+@import "globals/vars";
+@import "base";
+
+hr {
+  margin: 0;
+}
+
+ul.side-nav {
+  border-right: 1px solid $lightGray;
+}
