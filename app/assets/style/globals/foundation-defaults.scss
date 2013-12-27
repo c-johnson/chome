@@ -10,3 +10,11 @@ $header-bottom-margin: 0;
 /* Paragraph */
 $paragraph-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $paragraph-font-weight: 300;
+
+/* Side-nav */
+$side-nav-divider-size: 1px;
+$side-nav-divider-style: solid;
+$side-nav-divider-color: scale-color(#fff, $lightness: -10%);
+
+/* Overrides */
+$cursor-text-value: text;

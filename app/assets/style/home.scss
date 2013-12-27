@@ -6,5 +6,24 @@ hr {
 }
 
 ul.side-nav {
-  border-right: 1px solid $lightGray;
+  li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  } 
+}
+
+.main-content {
+  border-left: 1px solid $lightGray; 
+}
+
+.flex-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.flex-title {
+  aside {
+    color: $gray;
+  }
 }
