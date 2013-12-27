@@ -15,4 +15,4 @@ GET     /public/*filepath                       Static.Serve("public")
 # Catch all
 *       /:controller/:action                    :controller.:action
 
-*       /:post                                  App.ServePost
+*       /:post                                  App.Blog

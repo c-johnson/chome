@@ -10,15 +10,23 @@ type App struct {
 	*revel.Controller
 }
 
-func (c App) Index() revel.Result {
-	return c.Render()
-}
-
 func (c App) Home() revel.Result {
 	return c.Render()
 }
 
-func (c App) ServePost(post string) revel.Result {
+func (c App) Contact() revel.Result {
+	return c.Render()
+}
+
+func (c App) Consulting() revel.Result {
+	return c.Render()
+}
+
+func (c App) Links() revel.Result {
+	return c.Render()
+}
+
+func (c App) Blog(post string) revel.Result {
 	revel.INFO.Printf("Serving post : %s", post)
 	Generate(false)
 	publicPosts, err := PublicPosts()
