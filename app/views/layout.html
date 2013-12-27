@@ -1,5 +1,46 @@
-<header class="row space">
-  <h2 class="inline">Chris Johnson</h2>
-  <h6><em>Making the Web a worse place</em></h6>
-</header>
-<hr />
+{{ define "layout" }}
+{{set . "title" "World of Chris"}}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>{{.title}}</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600">
+    <link rel="shortcut icon" type="image/png" href="/public/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/public/css/home.css">
+    
+    <script data-main="public/js/main.js" src="public/bowerc/requirejs/require.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Small and medium business web design and consulting.">
+    <meta name="keywords" content="web design, web development, web marketing, google results, small business, kansas city, missouri, lincoln, nebraska">
+  </head>
+  <body>
+
+    <header class="row space">
+      <h2 class="inline">Chris Johnson</h2>
+      <h6><em>Making the Web a worse place</em></h6>
+    </header>
+    <hr />
+
+    <div class="row">
+      <ul class="large-1 columns side-nav">
+        <li><a href="/app/consulting" class="active">Web Design Services</a></li>
+        <li><a href="/app/" class="active">Blog</a></li>
+        <li><a href="/app/links">Links</a></li>
+        <li><a href="/app/contact">Contact</a></li>
+      </ul>
+
+      <div class="large-11 columns space main-content">
+        {{ template "content" . }}
+      </div>
+    </div>
+
+  {{if eq .RunMode "dev"}}
+    {{template "debug.html" .}}
+  {{end}}
+  </body>
+</html>
+
+{{ end }}

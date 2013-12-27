@@ -4,6 +4,7 @@ import (
 	"github.com/robfig/revel"
 	"io/ioutil"
 	"net/http"
+	"text/template"
 )
 
 type App struct {
@@ -11,6 +12,7 @@ type App struct {
 }
 
 func (c App) Home() revel.Result {
+	t := template.Must(template.New("layout").ParseFiles("layout.html", "home.html"))
 	return c.Render()
 }
 
