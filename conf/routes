@@ -4,7 +4,7 @@
 
 module:testrunner
 
-GET     /                                       App.Home
+GET     /                                       App.Consulting
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
