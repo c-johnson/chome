@@ -11,7 +11,7 @@
   "dependencies": {
     "angular": "~1.2.4",
     "foundation": "~5.0.2",
-    "requirejs": "~2.1.9",
+    "requirejs": "~2.1.10",
     "jquery": "~2.0.3",
     "modernizr": "~2.7.1"
   },
