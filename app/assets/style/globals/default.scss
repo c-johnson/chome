@@ -1,6 +1,8 @@
 @import "foundation-defaults";
 @import "vars";
 @import "default/aux";
+@import "default/typography";
+@import "default/layout";
 
 body * {
   text-rendering: optimizeLegibility;
