@@ -11,10 +11,17 @@ $header-bottom-margin: 0;
 $paragraph-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $paragraph-font-weight: 300;
 
-/* Side-nav */
-$side-nav-divider-size: 1px;
-$side-nav-divider-style: solid;
-$side-nav-divider-color: scale-color(#fff, $lightness: -10%);
+/* Top-bar */
+$topbar-bg: white;
+$topbar-link-color: black;
+$topbar-link-color-hover: black;
+$topbar-link-color-active: black;
+$topbar-link-bg-hover: white;
+$topbar-link-bg-active: white;
+$topbar-link-bg-active-hover: white;
+$topbar-menu-link-color: black;
+$topbar-title-font-size: 1.8rem;
+$topbar-dropdown-label-color: black;
 
 /* Overrides */
 $cursor-text-value: text;

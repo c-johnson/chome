@@ -1,7 +1,7 @@
 require.config({
   shim: {
     'foundation': {
-      deps: ['jquery'],
+      deps: ['jquery', 'modernizr'],
       exports: 'Foundation'
     }
   },
@@ -9,6 +9,7 @@ require.config({
   paths: {
     "angular": "../bowerc/angular/angular",
     "jquery": "../bowerc/jquery/jquery",
+    "modernizr": "../bowerc/modernizr/modernizr",
     "foundation": "../bowerc/foundation/js/foundation"
   },
   waitSeconds: 15
