@@ -3,7 +3,9 @@ header {
     font-size: 1.8rem;
   }
 
-  .active {
-    text-decoration: underline;
+  li {
+    &.active, &:hover {
+      text-decoration: underline;
+    }
   }
 }
