@@ -11,20 +11,29 @@ type App struct {
 	*revel.Controller
 }
 
+type Resp struct {
+	name  string // name of the object
+	value int    // its value
+}
+
 func (c App) Home() revel.Result {
-	return c.Render()
+	active := "home"
+	return c.Render(active)
 }
 
 func (c App) Contact() revel.Result {
-	return c.Render()
+	active := "contact"
+	return c.Render(active)
 }
 
 func (c App) Consulting() revel.Result {
-	return c.Render()
+	active := "consulting"
+	return c.Render(active)
 }
 
 func (c App) Links() revel.Result {
-	return c.Render()
+	active := "links"
+	return c.Render(active)
 }
 
 func (c App) Blog(post string) revel.Result {

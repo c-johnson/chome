@@ -28,9 +28,10 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-            <li class="active"><a href="#">Right Button Active</a></li>
-            <li class=""><a href="#">Right Button Active</a></li>
-            <li class=""><a href="#">Right Button Active</a></li>
+            <li class="{{if eq .active "home" }}active{{end}}"><a href="/home">Home</a></li>
+            <li class="{{if eq .active "consulting" }}active{{end}}"><a href="/consulting">Work</a></li>
+            <li class="{{if eq .active "links" }}active{{end}}"><a href="/links">Links</a></li>
+            <li class="{{if eq .active "contact" }}active{{end}}"><a href="/contact">Contact</a></li>
           </ul>
         </section>
       </nav>
