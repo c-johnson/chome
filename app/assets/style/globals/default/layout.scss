@@ -23,4 +23,8 @@ header {
 
 .main-content {
   border-left: 1px solid $lightGray; 
+
+  h1.title {
+    margin: 10px 0 20px;
+  }
 }

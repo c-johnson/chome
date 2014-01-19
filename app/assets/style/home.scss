@@ -1,6 +1,17 @@
 @import "globals/vars";
 @import "base";
 
+h1 {
+  margin: 10px 0 20px;
+}
+
+img.selfie {
+  width: 170px;
+  float: right;
+  padding-left: 20px;
+  border-radius: 100%;
+}
+
 .flex-title {
   display: flex;
   justify-content: space-between;
@@ -12,7 +23,3 @@
     color: $gray;
   }
 }
-
-// Temporary until we can figure out our layout situation
-// @import "contact";
-// @import "consulting";
