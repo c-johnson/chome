@@ -37,6 +37,7 @@ func (c App) Links() revel.Result {
 }
 
 func (c App) Blog(post string) revel.Result {
+	active := "blog"
 	revel.INFO.Printf("Serving post : %s", post)
 	Generate(false)
 	publicPosts, err := PublicPosts()
@@ -51,7 +52,7 @@ func (c App) Blog(post string) revel.Result {
 			}
 		}
 	}
-	return c.Render()
+	return c.Render(active)
 }
 
 type Html string

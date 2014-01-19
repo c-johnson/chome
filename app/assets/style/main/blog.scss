@@ -1,0 +1,27 @@
+@import "globals/vars";
+
+blockquote {
+  padding: 0;
+  margin: 0 50px 25px;
+  border: none;
+  font-style: italic;
+}
+
+.main-content h1.title {
+  margin-bottom: 0;
+}
+
+.flex-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  aside {
+    color: $gray;
+  }
+
+  & + a {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
