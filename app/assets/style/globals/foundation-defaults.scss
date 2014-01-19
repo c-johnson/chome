@@ -1,7 +1,7 @@
 /* Base */
 $base-font-size: 15px;
-$base-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$base-font-weight: 300;
+$body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$rem-base: $base-font-size;
 
 /* Header */
 $header-top-margin: 0;
@@ -20,6 +20,7 @@ $topbar-link-bg-hover: white;
 $topbar-link-bg-active: white;
 $topbar-link-bg-active-hover: white;
 $topbar-menu-link-color: black;
+$topbar-menu-icon-color: black;
 $topbar-title-font-size: 1.8rem;
 $topbar-dropdown-bg: white;
 $topbar-dropdown-link-bg: white;

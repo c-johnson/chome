@@ -1,11 +1,11 @@
 header {
-  .title {
-    font-size: 1.8rem;
-  }
-
   li {
     &.active, &:hover {
       text-decoration: underline;
     }
+  }
+
+  .title {
+    font-size: 1.8rem;
   }
 }
