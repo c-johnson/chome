@@ -4,7 +4,8 @@ module.exports = function(grunt) {
       dist: {
         options: {
           includePaths: [
-            "public/bowerc"
+            "public/bowerc",
+            "app/assets/style"
           ]
         },
         files: [{

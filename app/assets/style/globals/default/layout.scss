@@ -1,3 +1,10 @@
+@import "globals/vars";
+@import "sticky-footer";
+
+hr {
+  margin: 0;
+}
+
 header {
   li.active, a:hover {
     text-decoration: underline;
@@ -12,4 +19,8 @@ header {
       text-decoration: none;
     }
   }
+}
+
+.main-content {
+  border-left: 1px solid $lightGray; 
 }

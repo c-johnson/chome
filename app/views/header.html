@@ -2,41 +2,45 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>{{.title}}</title>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600">
-    <link rel="shortcut icon" type="image/png" href="/public/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="/public/css/home.css">
-    
-    <script data-main="public/js/main.js" src="public/bowerc/requirejs/require.js"></script>
+<head>
+  <title>{{.title}}</title>
+  <link rel="shortcut icon" type="image/png" href="/public/img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600">
+  <link rel="stylesheet" type="text/css" href="/public/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/{{print .active}}.css">
+  
+  <script data-main="public/js/main.js" src="public/bowerc/requirejs/require.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="Small and medium business web design and consulting.">
-    <meta name="keywords" content="web design, web development, web marketing, google results, small business, kansas city, missouri, lincoln, nebraska">
-  </head>
-  <body>
-    <header>
-      <nav class="top-bar row" data-topbar>
-        <ul class="title-area">
-            <li class="name">
-              <h1 class="title"><a href="#">Chris Johnson</a></h1>
-            </li>
-            <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="description" content="Small business web design and consulting.">
+  <meta name="keywords" content="web design, web development, web marketing, google results, small business, kansas city, missouri, san francisco, california">
+</head>
+
+<body>
+<div id="sticky-wrap">
+  <header>
+    <nav class="top-bar row" data-topbar>
+      <ul class="title-area">
+          <li class="name">
+            <h1 class="title"><a href="/home">Chris Johnson</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="{{if eq .active "home" }}active{{end}}"><a href="/home">Home</a></li>
+          <li class="{{if eq .active "consulting" }}active{{end}}"><a href="/consulting">Work</a></li>
+          <li class="{{if eq .active "links" }}active{{end}}"><a href="/links">Links</a></li>
+          <li class="{{if eq .active "contact" }}active{{end}}"><a href="/contact">Contact</a></li>
         </ul>
+      </section>
+    </nav>
+  </header>
 
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li class="{{if eq .active "home" }}active{{end}}"><a href="/home">Home</a></li>
-            <li class="{{if eq .active "consulting" }}active{{end}}"><a href="/consulting">Work</a></li>
-            <li class="{{if eq .active "links" }}active{{end}}"><a href="/links">Links</a></li>
-            <li class="{{if eq .active "contact" }}active{{end}}"><a href="/contact">Contact</a></li>
-          </ul>
-        </section>
-      </nav>
-    </header>
-
+  <div id="sticky-main">
     <hr />
 
     <div class="row">

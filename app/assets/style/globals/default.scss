@@ -12,6 +12,10 @@ body * {
 ul {
   list-style-type: none;
   margin: 0;
+
+  li ul {
+    margin: 0;
+  }
 }
 
 strong {
