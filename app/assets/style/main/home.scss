@@ -10,4 +10,12 @@ img.selfie {
   float: right;
   padding-left: 20px;
   border-radius: 100%;
+  position: relative;
+  bottom: 40px;
+}
+
+@media #{$small-only} { 
+  img.selfie {
+    bottom: 0;
+  }
 }
