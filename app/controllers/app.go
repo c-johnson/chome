@@ -38,20 +38,15 @@ func (c App) Links() revel.Result {
 
 func (c App) Blog(post string) revel.Result {
 	active := "blog"
-	revel.INFO.Printf("Serving post : %s", post)
 	// Generate(false)
 	publicPosts, err := PublicPosts()
 	if err == nil {
 		for _, publicPost := range publicPosts {
-			revel.INFO.Printf("Public post name : %s", publicPost.Shortname)
-			revel.INFO.Printf("My stupuid thing : %s", post)
 			if publicPost.Shortname == post {
 				htmlString := string(Html(post).ReturnHtml())
-				revel.INFO.Printf("html string = %s", htmlString)
 				c.RenderArgs["content"] = htmlString
 				c.RenderArgs["active"] = "blog"
 				return c.RenderTemplate("App/blog-post.html")
-				// return Html(post)
 			}
 		}
 	}
