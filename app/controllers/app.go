@@ -39,16 +39,19 @@ func (c App) Links() revel.Result {
 func (c App) Blog(post string) revel.Result {
 	active := "blog"
 	revel.INFO.Printf("Serving post : %s", post)
-	Generate(false)
+	// Generate(false)
 	publicPosts, err := PublicPosts()
 	if err == nil {
 		for _, publicPost := range publicPosts {
 			revel.INFO.Printf("Public post name : %s", publicPost.Shortname)
 			revel.INFO.Printf("My stupuid thing : %s", post)
 			if publicPost.Shortname == post {
-				// return c.RenderTemplate("../../../public/posts/out/cigarettes.html")
-				// return c.RenderTemplate("cigarettes")
-				return Html(post)
+				htmlString := string(Html(post).ReturnHtml())
+				revel.INFO.Printf("html string = %s", htmlString)
+				c.RenderArgs["content"] = htmlString
+				c.RenderArgs["active"] = "blog"
+				return c.RenderTemplate("App/blog-post.html")
+				// return Html(post)
 			}
 		}
 	}
@@ -59,19 +62,18 @@ type Html string
 
 func (r Html) Apply(req *revel.Request, resp *revel.Response) {
 	resp.WriteHeader(http.StatusOK, "text/html")
+	file := r.ReturnHtml()
+	resp.Out.Write(file)
+}
 
-	var file []byte
-	var err error
-
+func (r Html) ReturnHtml() []byte {
 	filePath, err := FindPublicPost(string(r))
-	revel.WARN.Printf("Buildng file path : %s", string(r))
+	var file []byte
 	if err == nil {
-		revel.INFO.Printf("Reading file : %s", filePath)
 		file, err = ioutil.ReadFile(filePath)
-		revel.INFO.Printf("Serving file part 1: %s", file)
 	}
 	if err == nil {
-		revel.INFO.Printf("Serving file part 2: %s", file)
-		resp.Out.Write(file)
+		return file
 	}
+	return nil
 }

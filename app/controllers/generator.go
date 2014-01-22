@@ -18,19 +18,11 @@ var _ = crc64.MakeTable
 
 var (
 	gopath      = os.Getenv("GOPATH")
-	APP_ROOT    = path.Join(gopath, "src/chome")
+	APP_ROOT    = path.Join(gopath, "src/github.com/c-johnson/chome")
 	PUBLIC_ROOT = path.Join(APP_ROOT, "public")
 	BLOG_OUT    = path.Join(PUBLIC_ROOT, "posts")
 	BLOG_ROOT   = os.Getenv("BLOG_ROOT")
 )
-
-// func init() {
-//  var gopath = os.Getenv("GOPATH")
-//  var APP_ROOT = path.Join(gopath, "src/chome")
-//  var PUBLIC_ROOT = path.Join(APP_ROOT, "public")
-//  var BLOG_OUT = path.Join(PUBLIC_ROOT, "out")
-//  var BLOG_ROOT = os.Getenv("BLOG_ROOT")
-// }
 
 type post struct {
 	Title       string
@@ -102,6 +94,7 @@ func GenerateHtml() {
 
 /* Retrieves the manifest file as a byte slice, used in some obscure function */
 func ManifestBytes() ([]byte, error) {
+	fmt.Printf("blog_out = %s", BLOG_OUT)
 	fullpath := path.Join(BLOG_OUT, "manifest.json")
 	return ioutil.ReadFile(fullpath)
 }
