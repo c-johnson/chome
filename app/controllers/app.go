@@ -36,6 +36,10 @@ func (c App) Links() revel.Result {
 	return c.Render(active)
 }
 
+func (c App) Wep() revel.Result {
+	return c.Redirect("https://rawgithub.com/c-johnson/wep/master/index.html")
+}
+
 func (c App) Blog(post string) revel.Result {
 	active := "blog"
 	// Generate(false)
