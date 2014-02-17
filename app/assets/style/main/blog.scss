@@ -1,9 +1,5 @@
 @import "globals/vars";
 
-.main-content p {
-  font-weight: 400;
-}
-
 blockquote {
   padding: 0;
   margin: 0 50px 25px;
@@ -15,15 +11,19 @@ h3 {
   margin-bottom: 1.33333rem;
 }
 
-.main-content h1.title {
-  margin-bottom: 0;
-  font-weight: 
+.posts {
+  margin: 0;
 }
 
-.flex-title {
+.post-title {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  a {
+    font-size: 2rem;    
+  }
 
   aside {
     color: $gray;

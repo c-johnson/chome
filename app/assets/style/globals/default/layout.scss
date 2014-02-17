@@ -22,13 +22,18 @@ header {
 }
 
 .main-content {
-  border-left: 1px solid $lightGray; 
+  position: relative;
 
-  .title {
-    margin: 30px 0 20px;
+  h1 {
+    margin: 1rem auto;
+    text-align: center;
   }
 }
 
 .extra-padding {
   height: 50px;
+}
+
+.top-bar .name h1 a {
+  font-weight: 300;
 }

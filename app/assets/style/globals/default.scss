@@ -1,23 +1,10 @@
-@import "foundation-defaults";
 @import "vars";
 @import "default/aux";
 @import "default/typography";
+@import "default/elements";
 @import "default/layout";
 
 body * {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-
-  li ul {
-    margin: 0;
-  }
-}
-
-strong {
-  font-weight: bold;
 }

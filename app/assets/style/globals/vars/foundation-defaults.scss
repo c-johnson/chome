@@ -1,14 +1,15 @@
 /* Base */
 $base-font-size: 15px;
-$body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Lora", "Georgia", serif;
 $rem-base: $base-font-size;
 
 /* Header */
 $header-top-margin: 0;
 $header-bottom-margin: 0;
+$header-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
 /* Paragraph */
-$paragraph-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $paragraph-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $paragraph-font-weight: 300;
 
 /* Top-bar */

@@ -24,4 +24,10 @@ require( ["angular", "home", "foundation", "fo-topbar"],
 function(home) {
   $(document).foundation();
   console.log('loaded all modules');
+
+  $(document).keydown(function(e){
+    if (e.keyCode == 37) {
+      // return false;
+    }
+  });
 });

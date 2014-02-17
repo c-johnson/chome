@@ -6,6 +6,7 @@
   <title>{{.title}}</title>
   <link rel="shortcut icon" type="image/png" href="/public/img/favicon.png">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600">
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/public/css/base.css">
   <link rel="stylesheet" type="text/css" href="/public/css/{{print .active}}.css">
   
@@ -32,7 +33,7 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <li class="{{if eq .active "home" }}active{{end}}"><a href="/home">Home</a></li>
-          <li class="{{if eq .active "consulting" }}active{{end}}"><a href="/consulting">Work</a></li>
+          <li class="{{if eq .active "work" }}active{{end}}"><a href="/work">Work</a></li>
           <li class="{{if eq .active "blog" }}active{{end}}"><a href="/blog">Blog</a></li>
           <li class="{{if eq .active "links" }}active{{end}}"><a href="/links">Links</a></li>
           <li class="{{if eq .active "contact" }}active{{end}}"><a href="/contact">Contact</a></li>

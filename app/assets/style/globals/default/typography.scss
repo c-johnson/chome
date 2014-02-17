@@ -1,6 +1,17 @@
+@import "globals/vars";
+
+p, span, div, aside, blockquote {
+  letter-spacing: .3px;
+}
+
 .title, .title * {
-  /* Foundation h1 size */
   font-size: 2.93333rem;
+}
+
+.subtitle, .subtitle * {
+  font-size: $base-font-size;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .text, .text * {

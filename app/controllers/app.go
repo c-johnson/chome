@@ -26,8 +26,8 @@ func (c App) Contact() revel.Result {
 	return c.Render(active)
 }
 
-func (c App) Consulting() revel.Result {
-	active := "consulting"
+func (c App) Work() revel.Result {
+	active := "work"
 	return c.Render(active)
 }
 
@@ -42,7 +42,7 @@ func (c App) Wep() revel.Result {
 
 func (c App) Blog(post string) revel.Result {
 	active := "blog"
-	Generate(false)
+	// Generate(false)
 	publicPosts, err := PublicPosts()
 	if err == nil {
 		for _, publicPost := range publicPosts {

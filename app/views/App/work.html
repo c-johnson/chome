@@ -1,19 +1,22 @@
 {{template "header.html" .}}
 
-<link rel="stylesheet" type="text/css" href="/public/css/consulting.css">
+<link rel="stylesheet" type="text/css" href="/public/css/work.css">
 
-<section>
-  <div>
-    <h1 class="title">Effective web marketing drives sales</h1>
-    <p>
-      Increasingly, people are turning online to buy products, find services, and get information.  If your business isn't easily discovered online, you are likely missing out on a valuable and growing market segment.              
-    </p>
-  </div>
+<ul class="subnav" data-subnav="work" data-subnav-controller>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#past-work">Past Work</a></li>
+</ul>
 
-  <ul class="large-block-grid-3 small">
+<section data-subnav="work" id="services">
+  <h1 class="title">Business + Web = $$$</h1>
+  <p>
+    Increasingly, people are turning online to buy products, find services, and get information.  If your business  isn't easily discovered online, you are likely missing out on a valuable and growing market segment.            
+  </p>
+
+  <ul class="large-block-grid-3 space">
     <li>
-      <h4>Market your business</h4>
-      <ul>
+      <h4 class="subtitle">Market your business</h4>
+      <ul class="small product-types norm-ul">
         <li>Traditional and mobile websites</li>
         <li>Google and Bing discovery</li>
         <li>Facebook, Twitter, and LinkedIn</li>
@@ -23,8 +26,8 @@
     </li>
 
     <li>
-      <h4>Inform your customers</h4>
-      <ul>
+      <h4 class="subtitle">Inform your customers</h4>
+      <ul class="small product-types norm-ul">
         <li>Catalogue your products and services</li>
         <li>Phone, email, and online support</li>
         <li>Blogs, announcements, press releases</li>
@@ -35,8 +38,8 @@
     </li>
 
     <li>
-      <h4>Run things smoothly</h4>
-      <ul>
+      <h4 class="subtitle">Run things smoothly</h4>
+      <ul class="small product-types norm-ul">
         <li>Web analytics, statistics, reports</li>
         <li>Converstion tracking and optimization</li>
         <li>Custom domains & email addresses</li>
@@ -52,7 +55,7 @@
   </p>
 </section>
 
-<section>
+<section data-subnav="work" id="past-work">
   <h1 class="title">Past Work</h1>
 
   <ul>
