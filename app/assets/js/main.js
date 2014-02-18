@@ -1,3 +1,5 @@
+var C = C || {};
+
 require.config({
   shim: {
     'foundation': {
@@ -20,8 +22,8 @@ require.config({
   waitSeconds: 15
 });
 
-require( ["angular", "home", "foundation", "fo-topbar"],
-function(home) {
+require( ["subnav", "angular", "home", "foundation", "fo-topbar"],
+function(subnav) {
   $(document).foundation();
   console.log('loaded all modules');
 

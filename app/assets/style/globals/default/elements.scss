@@ -21,8 +21,9 @@ ul.norm-ul {
   li {
     display: inline-block;
 
-    &.active a {
+    a.active {
       color: black;
+      cursor: text;
     }
 
     &:not(:first-child) {
