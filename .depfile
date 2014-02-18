@@ -1,5 +1,10 @@
 {
   "name": "chome",
   "host": "198.199.103.191",
-  "target_dir": "/home/chome/gowrk/src/github.com/c-johnson/chome"
+  "target_dir": "/home/chome/gowrk/src/github.com/c-johnson/chome",
+  "cmds": [
+    "git pull origin master",
+    "grunt",
+    "nohup revel run $CHOME &"
+  ]
 }
