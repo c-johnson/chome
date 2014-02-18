@@ -6,7 +6,10 @@ define(["jquery"], function() {
     init: function () {
       this.registerSubnavs();
       this.registerEvents();
-      this.initializeSubnavs();
+
+      this.subnavs.forEach(function (subnav) {
+        $(subnav.controller).find('a')[0].click();
+      });
     },
 
     registerSubnavs: function () {
@@ -64,12 +67,6 @@ define(["jquery"], function() {
             $(section).hide();
           }
         });
-      });
-    },
-
-    initializeSubnavs: function () {
-      this.subnavs.forEach(function (subnav) {
-
       });
     }
   };
