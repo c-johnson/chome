@@ -49,12 +49,15 @@ type test struct {
 }
 
 /* This is the root of the function that will be called on a CRON / Save file basis which translates .md files into static pages and generates metadata around files in your BLOG_ROOT directory */
-func Generate(manifest bool) {
-	revel.INFO.Printf("Generating!")
+func Generate(overwrite bool, manifest bool) {
+	if overwrite {
+		revel.INFO.Printf("Overwriting all posts HTML")
+		GenerateHtml()
+	}
 	if manifest {
+		revel.INFO.Printf("Saving a new manifest.json file")
 		SaveManifest()
 	}
-	GenerateHtml()
 }
 
 /*

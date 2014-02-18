@@ -42,7 +42,7 @@ func (c App) Wep() revel.Result {
 
 func (c App) Blog(post string) revel.Result {
 	active := "blog"
-	// Generate(false)
+	Generate(true, false)
 	publicPosts, err := PublicPosts()
 	if err == nil {
 		for _, publicPost := range publicPosts {

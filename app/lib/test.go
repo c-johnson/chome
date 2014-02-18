@@ -11,5 +11,5 @@ var _ = bytes.Compare
 var _ = json.Compact
 
 func main() {
-	Generate(true)
+	Generate(false, false)
 }
