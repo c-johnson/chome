@@ -34,6 +34,12 @@ module.exports = function(grunt) {
             dest: 'public/img',
             flatten: true
           },
+          {
+            expand: true,
+            src: ['app/assets/mp3/**/*'],
+            dest: 'public/mp3',
+            flatten: true
+          },
         ]
       }
     },

@@ -31,6 +31,10 @@ func (c App) Work() revel.Result {
 	return c.Render(active)
 }
 
+func (c App) Fuck() revel.Result {
+	return c.Render("fuck")
+}
+
 func (c App) Links() revel.Result {
 	active := "links"
 	return c.Render(active)
