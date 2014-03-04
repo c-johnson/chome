@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"github.com/robfig/revel"
+	"github.com/c-johnson/goblog"
+	"github.com/revel/revel"
 	"io/ioutil"
 	"net/http"
-	// "text/template"
 )
 
 type App struct {
@@ -46,8 +46,8 @@ func (c App) Wep() revel.Result {
 
 func (c App) Blog(post string) revel.Result {
 	active := "blog"
-	Generate(true, false)
-	publicPosts, err := PublicPosts()
+	goblog.Generate(true, false)
+	publicPosts, err := goblog.PublicPosts()
 	if err == nil {
 		for _, publicPost := range publicPosts {
 			if publicPost.Shortname == post {
@@ -70,7 +70,7 @@ func (r Html) Apply(req *revel.Request, resp *revel.Response) {
 }
 
 func (r Html) ReturnHtml() []byte {
-	filePath, err := FindPublicPost(string(r))
+	filePath, err := goblog.FindPublicPost(string(r))
 	var file []byte
 	if err == nil {
 		file, err = ioutil.ReadFile(filePath)

@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/dre1080/revel-grunt"
-	"github.com/robfig/revel"
+	"github.com/revel/revel"
 )
 
 func init() {
