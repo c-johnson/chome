@@ -46,7 +46,7 @@ func (c App) Wep() revel.Result {
 
 func (c App) Blog(post string) revel.Result {
 	active := "blog"
-	goblog.Generate(false, false)
+	goblog.Generate(true, false)
 	publicPosts, err := goblog.PublicPosts()
 	if err == nil {
 		for _, publicPost := range publicPosts {
