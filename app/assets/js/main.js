@@ -12,11 +12,15 @@ require.config({
     },
     'angular': {
       exports: 'angular'
+    },
+    'ng-router': {
+      deps: ['angular']
     }
   },
   baseUrl: "public/js",
   paths: {
     "angular": "../bowerc/angular/angular",
+    "ng-router": "../bowerc/angular-ui-router/release/angular-ui-router",
     "domReady": "../bowerc/requirejs-domready/domReady",
     "jquery": "../bowerc/jquery/jquery",
     "modernizr": "../bowerc/modernizr/modernizr",

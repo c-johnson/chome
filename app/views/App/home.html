@@ -1,13 +1,19 @@
 {{template "header.html" .}}
 
 <div class="intro">
+
   <h1 class="title">Hi, my name is Chris.</h1>
 
   <img class="selfie" src="/public/img/me.png" />
 
-  <p>Hello!  I am a 22 year old living in San Francisco, CA.  I'm a glorified ape that builds websites, philosophizes about humanity, and generally stumbles around Planet Earth making a fool of myself.  This website is an experiment to see if I can cram everything in my life into one simple frame.</p>
+  <p>I'm a glorified ape that builds websites, philosophizes about humanity, and generally stumbles around Planet Earth making a fool of myself.  This website is an experiment to see if I can cram everything in my life into one simple frame.  I currently reside in San Francisco, CA.</p>
 
   <p>If you would like to hire me, check out my <a href="/work">work</a>.</p>
+
+  <div ui-view></div>
+  <!-- We'll also add some navigation: -->
+  <a ui-sref="state1">State 1</a>
+  <a ui-sref="state2">State 2</a>
 </div>
 
 {{template "footer.html" .}}

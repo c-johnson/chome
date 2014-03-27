@@ -8,7 +8,8 @@ define([
   'subnav',
   'home',
   'foundation',
-  'fo-topbar'
+  'fo-topbar',
+  'ng-router'
 ], function (require, ng, app) {
   'use strict';
 
