@@ -47,7 +47,7 @@ define(["jquery"], function() {
       this.registerSubnavs();
 
       var hasHash = (window.location !== undefined && window.location.hash !== undefined && window.location.hash !== "");
-      var id = hasHash ? window.location.hash : "#" + this.subnavs[0].sections[0].id;
+      var id = hasHash ? window.location.hash : "#" + this.subnavs[0].sections[2].id;
       this.subnavs[0].displaySection(id);
     },
 

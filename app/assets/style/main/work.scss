@@ -32,6 +32,22 @@ h4 {
 
 }
 
-.cropped {
-  
+.skill-set {
+  position: relative;
+
+  ul {
+    float: left;
+    margin-right: 0;
+    list-style-type: disc;
+  }
+
+  .subtitle {
+    float: left;
+    text-align: right;
+    line-height: 24px;
+    margin-right: 40px;
+    min-width: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
