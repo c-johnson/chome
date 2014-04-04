@@ -2,7 +2,7 @@ FROM ubuntu
 
 # Install dependencies
 RUN apt-get update
-RUN apt-get install -y git ack-grep vim curl wget tmux build-essential python-software-properties nginx
+RUN apt-get install -y git ack-grep vim curl wget tmux build-essential python-software-properties nginx git
 
 # Add configuration files
 # TODO: ADD nginx conf
@@ -21,9 +21,7 @@ RUN cd /go/server
 # TODO: add this source code
 
 RUN cd /etc/nginx/sites-enabled
-RUN ln -s /etc/nginx/sites-available/servr
-RUN nginx -s reload
-
+RUN ln -s /etc/nginx/sites-available/servr servr
+RUN service nginx reload
 
 EXPOSE 9000
-

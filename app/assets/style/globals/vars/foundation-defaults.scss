@@ -29,3 +29,9 @@ $topbar-dropdown-label-color: black;
 
 /* Overrides */
 $cursor-text-value: text;
+
+/* Element overrides / WTFs */
+
+ul li ul, ul li ol {
+  margin-left: auto;
+}

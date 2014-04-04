@@ -42,3 +42,15 @@ header {
 .top-bar .name h1 a {
   font-weight: 300;
 }
+
+// Different length sections
+
+.skinny {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.slim {
+  margin: 0 auto;
+  max-width: 800px;
+}

@@ -9,9 +9,13 @@
   ],
   "start": {
     "dir": "/Users/chris/ciqss/proj/chome",
-    "cmds": [
+    "hangs": [
       "revel run $CHOME",
       "grunt watch"
+    ],
+    "nohangs": [
+      "open http://localhost:9000",
+      "subl ~/proj/chome"
     ]
   }
 }

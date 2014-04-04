@@ -2,12 +2,55 @@
 
 <link rel="stylesheet" type="text/css" href="/public/css/work.css">
 
-<ul class="subnav" data-subnav="work" data-subnav-controller>
+<ul class="subnav" data-subnav-switcher="work" data-subnav-default="#past-work">
   <li><a href="#past-work">Past Work</a></li>
   <li><a href="#services">Services</a></li>
 </ul>
 
-<section data-subnav="work" id="services">
+<section data-subnav-section="work" id="past-work">
+  <h1 class="title">Past Work</h1>
+
+  <ul class="large-block-grid-2">
+    <li class="work-item">
+      <h3>LocBox</h3>
+      <a class="work-box" href="http://www.locbox.com" target="_blank">
+        <img class="cropped" src="/public/img/locbox.png" style="top: 163px;">
+      </a>
+    </li>
+    <li class="work-item">
+      <h3>Main Street Carpentry</h3>
+      <a class="work-box" href="http://www.mainstreetcarpentry.com" target="_blank">
+        <img class="cropped" src="/public/img/mainst.png">
+      </a>
+    </li>
+    <li class="work-item">
+      <h3>The World Energy Project</h3>
+      <a class="work-box" href="http://www.cjohnson.io/wep" target="_blank">
+        <img src="/public/img/wep.png" style="top: 136px;">
+      </a>
+    </li>
+    <li class="work-item">
+      <h3>Magnolia Metals</h3>
+      <a class="work-box" href="http://www.magnoliabronze.com" target="_blank">
+        <img class="cropped" src="/public/img/magnolia.png" style="top: 103px;">
+      </a>
+    </li>
+    <li class="work-item">
+      <h3>Premier Parking Services</h3>
+      <a class="work-box" href="http://www.premier-parking.com" target="_blank">
+        <img class="cropped" src="/public/img/premier.png" style="top: 100px;">
+      </a>
+    </li>
+    <li class="work-item">
+      <h3>This Site</h3>
+      <a class="work-box" href="#">
+        <img class="cropped" src="/public/img/chome.png" style="top: 34px;">
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section class="slim" id="services" data-subnav-section="work">
   <h1 class="title">Business + Web = $$$</h1>
   <p>
     Increasingly, people are turning online to buy products, find services, and get information.  If your business  isn't easily discovered online, you are likely missing out on a valuable and growing market segment.            
@@ -22,18 +65,19 @@
         <li>Facebook, Twitter, and LinkedIn</li>
         <li>Yelp and other rating sites</li>
         <li>Online communities & forums</li>
+        <li>Blogs & content marketing</li>
       </ul>
     </li>
 
-    <li>
+    <li style="padding: 0;">
       <h4 class="subtitle">Inform your customers</h4>
       <ul class="small product-types norm">
         <li>Catalogue your products and services</li>
         <li>Phone, email, and online support</li>
-        <li>Blogs, announcements, press releases</li>
+        <li>Announcements and press releases</li>
         <li>Specials deals or offers </li>
         <li>Product / sales information </li>
-        <li>Locations, available hours, and events</li>
+        <li>Locations, hours, upcoming events</li>
       </ul>
     </li>
 
@@ -41,11 +85,11 @@
       <h4 class="subtitle">Run things smoothly</h4>
       <ul class="small product-types norm">
         <li>Web analytics, statistics, reports</li>
-        <li>Converstion tracking and optimization</li>
-        <li>Custom domains & email addresses</li>
-        <li>Billing, reporting, and CRM software</li>
+        <li>Converstion tracking & optimization</li>
+        <li>Custom domains and email addresses</li>
+        <li>Billing, reporting, & CRM solutions</li>
         <li>HR and scheduling solutions</li>
-        <li>Any other custom software -- Just ask!</li>
+        <li>Any other software -- Just ask!</li>
       </ul>
     </li>
   </ul>
@@ -53,68 +97,6 @@
   <p>
     The bottom line is, investing a little into technology can earn you a lot.  No matter what industry you're in, software can save you and your customers time, manage the complexitiy of business, and bring new customers to your doorstep. If you have questions about these services, feel free to <a href="/contact">contact me</a>.
   </p>
-</section>
-
-<section data-subnav="work" id="past-work">
-  <h1 class="title">Past Work</h1>
-
-  <ul>
-    <li class="work-item row">
-      <h3 class="columns large-12">LocBox</h3>
-      <a class="work-box" href="http://www.locbox.com" target="_blank">
-        <div class="columns large-8">
-          <img src="/public/img/ss.png">
-        </div>
-        <div class="columns large-4">
-
-        </div>
-      </a>
-    </li>
-    <li class="work-item row">
-      <h3 class="columns large-12">Main Street Carpentry</h3>
-      <a class="work-box" href="http://www.mainstreetcarpentry.com" target="_blank">
-        <div class="columns large-8">
-          <img src="/public/img/ss.png">
-        </div>
-        <div class="columns large-4">
-
-        </div>
-      </a>
-    </li>
-    <li class="work-item row">
-      <h3 class="columns large-12">The World Energy Project</h3>
-      <a class="work-box" href="http://www.cjohnson.io/wep" target="_blank">
-        <div class="columns large-8">
-          <img src="/public/img/ss.png">
-        </div>
-        <div class="columns large-4">
-
-        </div>
-      </a>
-    </li>
-    <li class="work-item row">
-      <h3 class="columns large-12">Magnolia Metals</h3>
-      <a class="work-box" href="http://www.magnoliabronze.com" target="_blank">
-        <div class="columns large-8">
-          <img src="/public/img/ss.png">
-        </div>
-        <div class="columns large-4">
-
-        </div>
-      </a>
-    </li>
-    <li class="work-item row">
-      <h3 class="columns large-12">Premier Parking Services</h3>
-      <a class="work-box" href="http://www.premier-parking.com" target="_blank">
-        <div class="columns large-8">
-          <img src="/public/img/ss.png">
-        </div>
-        <div class="columns large-4">
-
-        </div>
-      </a>
-    </li>
-  </ul>
 </section>
 
 {{template "footer.html" .}}

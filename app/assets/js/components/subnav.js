@@ -1,74 +1,79 @@
 define(["jquery"], function() {
 
+  var Subnav = function (id, switcher) {
+    this.init = function () {
+      this.id = id;
+      this.switcher = switcher;
+      this.sections = [];
+
+      this.register();
+    };
+
+    this.init();
+  };
+
+  Subnav.prototype.register = function () {
+    $(this.switcher).on('click', 'a', function (evt) {
+      var sectionID = $(evt.target).attr('href');
+      this.displaySection(sectionID);
+      evt.preventDefault();
+    }.bind(this));
+  };
+
+  Subnav.prototype.displaySection = function (sectionID) {
+
+    // Visually activate the correct link in the switcher
+    $(this.switcher).find('a').each(function (i, link) {
+      $(link).removeClass('active');
+      
+      if ($(link).attr('href') === sectionID) {
+        $(link).addClass('active');
+      }
+    });
+
+    // Show / hide the appropriate sections
+    this.sections.forEach(function (section) {
+      $(section).hide();
+      if ("#" + $(section).attr('id') === sectionID) {
+        $(section).show();
+      }
+    });
+  };
+
   var subnavController = {
     subnavs: null,
 
     init: function () {
       this.registerSubnavs();
-      this.registerEvents();
 
-      this.subnavs.forEach(function (subnav) {
-        $(subnav.controller).find('a')[0].click();
-      });
+      var hasHash = (window.location !== undefined && window.location.hash !== undefined && window.location.hash !== "");
+      var id = hasHash ? window.location.hash : "#" + this.subnavs[0].sections[0].id;
+      this.subnavs[0].displaySection(id);
     },
 
+    /* 
+      This function loops through every subnav group and registers them into an array of "subnav groups"
+    */
     registerSubnavs: function () {
       this.subnavs = [];
+      var ctrl = this;
 
-      $('[data-subnav-controller').each(function (i, elem) {
-        var subnavID = $(elem).data('subnav');
-        var subnavSections = $('[data-subnav="'+subnavID+'"]');
-        var subnav = {};
-        
-        subnav = {};
-        subnav.id = subnavID;
-        subnav.sections = [];
+      // Find all "subnav switcher" components in the application.  If there is no switcher, the subnavigation piece is not registered.
+      $('[data-subnav-switcher]').each(function (i, elem) {
+        var id = $(elem).data('subnav-switcher');
+        var switcher = elem;
+        var subnav = new Subnav(id, switcher);
+
+        // For each subnav group, find all of the "subnav sections" within that group
+        var subnavSections = $('[data-subnav-section="'+subnav.id+'"]');
 
         subnavSections.each(function (j, jElem) {
-
-          if ($(jElem).data('subnav-controller') !== undefined) {
-            subnav.controller = jElem;
-          } else {
-            subnav.sections.push(jElem);
-          }
+          subnav.sections.push(jElem);
         });
 
-        this.subnavs.push(subnav);
+        ctrl.subnavs.push(subnav);
       }.bind(this));
     },
-
-    registerEvents: function () {
-      this.subnavs.forEach(function (subnav) {
-        var controller = this;
-
-        $(subnav.controller).on('click', 'a', function (evt) {
-          $(this).addClass('active');
-          var sectionID = $(this).attr('href');
-          sectionID = sectionID.substr(1, sectionID.length);
-          controller.displaySection(sectionID);
-        });
-      }.bind(this));
-    },
-
-    displaySection: function (sectionID) {
-      this.subnavs.forEach(function (subnav) {
-        $(subnav.controller).find('a').each(function (i, link) {
-          if ($(link).attr('href') === "#" + sectionID) {
-            $(link).addClass('active');
-          } else {
-            $(link).removeClass('active');
-          }
-        });
-
-        subnav.sections.forEach(function (section) {
-          if ($(section).attr('id') === sectionID) {
-            $(section).show();
-          } else {
-            $(section).hide();
-          }
-        });
-      });
-    }
   };
 
   subnavController.init();

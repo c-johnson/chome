@@ -1,7 +1,4 @@
 define(['jquery', 'angular'], function($, ng) {
-
-  debugger
-
   $(document).on('keydown', function (evt) {
     var root = "http://localhost:9000";
     if (evt.which == 37) {

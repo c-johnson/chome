@@ -13,11 +13,6 @@ img.selfie {
   position: relative;
 }
 
-.intro {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 @media #{$small-only} { 
   img.selfie {
     bottom: 0;
