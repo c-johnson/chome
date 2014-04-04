@@ -40,8 +40,8 @@ func (c App) Wep() revel.Result {
 	return c.Redirect("https://rawgithub.com/c-johnson/wep/master/index.html")
 }
 
-func (c App) Blog(post string) revel.Result {
-	active := "blog"
+func (c App) Words(post string) revel.Result {
+	active := "words"
 	goblog.Generate(false, false)
 	publicPosts, err := goblog.PublicPosts()
 	if err == nil {
@@ -49,7 +49,7 @@ func (c App) Blog(post string) revel.Result {
 			if publicPost.Shortname == post {
 				htmlString := string(Html(post).ReturnHtml())
 				c.RenderArgs["content"] = htmlString
-				c.RenderArgs["active"] = "blog"
+				c.RenderArgs["active"] = "words"
 				return c.RenderTemplate("App/blog-post.html")
 			}
 		}

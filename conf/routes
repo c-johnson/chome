@@ -15,6 +15,6 @@ GET     /public/*filepath                       Static.Serve("public")
 # Catch all
 # *       /:controller/:action                    :controller.:action
 
-*         /2014/:post                             App.Blog
+*         /2014/:post                             App.Words
 
 *         /:page                                  App.:page
