@@ -25,7 +25,8 @@ require.config({
     "jquery": "../bowerc/jquery/jquery",
     "modernizr": "../bowerc/modernizr/modernizr",
     "foundation": "../bowerc/foundation/js/foundation",
-    "fo-topbar": "../bowerc/foundation/js/foundation/foundation.topbar"
+    "fo-topbar": "../bowerc/foundation/js/foundation/foundation.topbar",
+    "underscore": "../bowerc/underscore/underscore"
   },
   deps: ['./bootstrap'],
   waitSeconds: 15

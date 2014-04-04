@@ -1,5 +1,6 @@
-define(["jquery"], function() {
+// define(["jquery"], function() {
 
+(function() {
   var contextController = {
     // subdomain
     subd: null,
@@ -19,14 +20,11 @@ define(["jquery"], function() {
       }
 
       this.pathname = window.location.pathname;
-
-      
-
-
-
     }
   };
 
   contextController.init();
   return contextController;
-});
+}());
+
+// });
