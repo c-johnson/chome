@@ -7,6 +7,7 @@ define([
   'app',
   'subnav',
   'home',
+  'underscore',
   'foundation',
   'fo-topbar',
   'ng-router'
