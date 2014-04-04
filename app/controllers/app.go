@@ -50,7 +50,7 @@ func (c App) Words(post string) revel.Result {
 				htmlString := string(Html(post).ReturnHtml())
 				c.RenderArgs["content"] = htmlString
 				c.RenderArgs["active"] = "words"
-				return c.RenderTemplate("App/blog-post.html")
+				return c.RenderTemplate("App/word.html")
 			}
 		}
 	}
