@@ -17,6 +17,5 @@ define([
   require(['domReady!'], function (document) {
     $(document).foundation();
     ng.bootstrap(document, ['app']);
-    console.log('loaded all modules');
   });
 });
