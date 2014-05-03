@@ -40,6 +40,12 @@ module.exports = function(grunt) {
             dest: 'public/mp3',
             flatten: true
           },
+          {
+            expand: true,
+            src: ['app/assets/fonts/**/*'],
+            dest: 'public/fonts',
+            flatten: true
+          },
         ]
       }
     },
