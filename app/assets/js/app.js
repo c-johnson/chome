@@ -1,5 +1,7 @@
 define(['jquery', 'angular'], function($, ng) {
 
+  window.hello = "Hello!";
+
   /* Implement basic keyboard switching functionality */
   $(document).on('keydown', function (evt) {
     var root = "http://localhost:9000";

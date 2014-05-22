@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var livereload = require('gulp-livereload');
+
 
 var paths = {
   scripts: ['app/assets/js/**/*.js'],
@@ -31,6 +33,16 @@ gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.style, ['style']);
   gulp.watch(paths.images, ['images']);
+  var server = livereload();
+  gulp.watch('public/js/**.js').on('change', function(file) {
+      server.changed(file.path);
+  });
+  gulp.watch('public/style/**.css').on('change', function(file) {
+      server.changed(file.path);
+  });
+  gulp.watch('public/img/**').on('change', function(file) {
+      server.changed(file.path);
+  });
 });
 
 gulp.task('default', ['scripts', 'style', 'images']);

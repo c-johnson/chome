@@ -1,10 +1,11 @@
 package controllers
 
 import (
-	"github.com/c-johnson/goblog"
-	"github.com/revel/revel"
 	"io/ioutil"
 	"net/http"
+
+	"github.com/c-johnson/goblog"
+	"github.com/revel/revel"
 )
 
 type App struct {
@@ -18,6 +19,11 @@ type Resp struct {
 
 func (c App) Home() revel.Result {
 	active := "home"
+	return c.Render(active)
+}
+
+func (c App) Application() revel.Result {
+	active := "app"
 	return c.Render(active)
 }
 
