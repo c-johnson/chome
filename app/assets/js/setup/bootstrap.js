@@ -10,7 +10,7 @@ define([
   'underscore',
   'foundation',
   'fo-topbar',
-  'ng-router'
+  'ui-router'
 ], function (require, ng, app) {
   'use strict';
 
