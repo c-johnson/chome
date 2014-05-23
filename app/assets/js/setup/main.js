@@ -28,6 +28,6 @@ require.config({
     "fo-topbar": "../bowerc/foundation/js/foundation/foundation.topbar",
     "underscore": "../bowerc/underscore/underscore"
   },
-  deps: ['./bootstrap'],
+  deps: ['setup/bootstrap'],
   waitSeconds: 15
 });
