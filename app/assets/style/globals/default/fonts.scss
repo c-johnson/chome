@@ -33,20 +33,20 @@ General guide on @font-face usage for bold/italic etc, courtesy of Stack Overflo
 
 @font-face {
   font-family: "Bembo";
-  src:  url("../fonts/bembo-regular.eot"); /* IE9 Compat Modes */
-  src:  url("../fonts/bembo-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-        url("../fonts/bembo-regular.woff") format("woff"), /* Modern Browsers */
-        url("../fonts/bembo-regular.ttf") format("truetype"), /* Safari, Android, iOS */
-        url("../fonts/bembo-regular.svg") format("svg"); /* Legacy iOS */
+  src:  url("/public/fonts/bembo-regular.eot"); /* IE9 Compat Modes */
+  src:  url("/public/fonts/bembo-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url("/public/fonts/bembo-regular.woff") format("woff"), /* Modern Browsers */
+        url("/public/fonts/bembo-regular.ttf") format("truetype"), /* Safari, Android, iOS */
+        url("/public/fonts/bembo-regular.svg") format("svg"); /* Legacy iOS */
 }
 
 @font-face {
   font-family: "Bembo";
-  src:  url("../fonts/bembo-semibold.eot"); /* IE9 Compat Modes */
-  src:  url("../fonts/bembo-semibold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-        url("../fonts/bembo-semibold.woff") format("woff"), /* Modern Browsers */
-        url("../fonts/bembo-semibold.ttf") format("truetype"), /* Safari, Android, iOS */
-        url("../fonts/bembo-semibold.svg") format("svg"); /* Legacy iOS */
+  src:  url("/public/fonts/bembo-semibold.eot"); /* IE9 Compat Modes */
+  src:  url("/public/fonts/bembo-semibold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url("/public/fonts/bembo-semibold.woff") format("woff"), /* Modern Browsers */
+        url("/public/fonts/bembo-semibold.ttf") format("truetype"), /* Safari, Android, iOS */
+        url("/public/fonts/bembo-semibold.svg") format("svg"); /* Legacy iOS */
 
   font-weight: 500;
 }
