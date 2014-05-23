@@ -47,32 +47,32 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.fonts, ['fonts']);
 
-  var server = livereload();
-  gulp.watch('public/js/**/*.js').on('change', function(file) {
-    server.changed(file.path);
-  });
-  gulp.watch('public/css/**/*.css').on('change', function(file) {
-    console.log('scss is being compileedd1!!!!');
+  // var server = livereload();
+  // gulp.watch('public/js/**/*.js').on('change', function(file) {
+  //   server.changed(file.path);
+  // });
+  // gulp.watch('public/css/**/*.css').on('change', function(file) {
+  //   console.log('scss is being compileedd1!!!!');
 
-    // The gulp.watch api is kind of silly here.  It gives you an absolute path for a css file on your system that has changed.  However, the livereload server wants to know the path the web server will serve the file at.  
+  //   // The gulp.watch api is kind of silly here.  It gives you an absolute path for a css file on your system that has changed.  However, the livereload server wants to know the path the web server will serve the file at.  
 
-    // file.path looks like:
-    // /Users/chris/ciqss/gowrk/src/github.com/c-johnson/chome/public/css/main/home.css
-    // |_____________________________________________________________|________________|
-    //                            |                                           |
-    //              Preceding file path, discard                        web server 
-    //                9 tokens (+ leading slash)
+  //   // file.path looks like:
+  //   // /Users/chris/ciqss/gowrk/src/github.com/c-johnson/chome/public/css/main/home.css
+  //   // |_____________________________________________________________|________________|
+  //   //                            |                                           |
+  //   //              Preceding file path, discard                        web server 
+  //   //                9 tokens (+ leading slash)
 
-    var webPath = file.path.split("/").slice(10).join("/");
-    console.log(webPath);
-    server.changed(webPath);
-  });
-  gulp.watch('public/img/**').on('change', function(file) {
-    server.changed(file.path);
-  });
-  gulp.watch('public/fonts/**').on('change', function(file) {
-    server.changed(file.path);
-  });
+  //   var webPath = file.path.split("/").slice(10).join("/");
+  //   console.log(webPath);
+  //   server.changed(webPath);
+  // });
+  // gulp.watch('public/img/**').on('change', function(file) {
+  //   server.changed(file.path);
+  // });
+  // gulp.watch('public/fonts/**').on('change', function(file) {
+  //   server.changed(file.path);
+  // });
 });
 
 gulp.task('default', ['scripts', 'style', 'images', 'fonts']);
