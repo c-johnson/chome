@@ -37,7 +37,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('fonts', function () {
-  return gulp.src(paths.images)
+  return gulp.src(paths.fonts)
     .pipe(gulp.dest('public/fonts'));
 });
 
