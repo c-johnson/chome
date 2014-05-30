@@ -5,6 +5,7 @@
   "cmds": [
     "git pull origin master",
     "npm install",
+    "bower install",
     "gulp",
     "nohup revel run $CHOME &"
   ],
