@@ -4,6 +4,7 @@
   "target_dir": "/home/chome/gowrk/src/github.com/c-johnson/chome",
   "cmds": [
     "git pull origin master",
+    "npm install",
     "gulp",
     "nohup revel run $CHOME &"
   ],
