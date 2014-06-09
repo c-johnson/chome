@@ -53,7 +53,7 @@ func (c App) Test() revel.Result {
 
 func (c App) Words(post string) revel.Result {
 	active := "words"
-	goblog.Generate(false, false)
+	goblog.Generate(true, false)
 	publicPosts, err := goblog.PublicPosts()
 	if err == nil {
 		for _, publicPost := range publicPosts {
