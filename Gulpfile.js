@@ -7,19 +7,14 @@ var paths = {
   scripts: ['app/assets/js/**/*.js'],
   style: ['app/assets/style/**/*.scss'],
   fonts: ['app/assets/fonts/**'],
-  images: ['app/assets/img/**']
+  images: ['app/assets/img/**'],
+  rss: ['app/assets/feed.rss']
 };
 
 gulp.task('scripts', function () {
   return gulp.src(paths.scripts)
     .pipe(gulp.dest('public/js'));
 });
-
-// gulp.task('server', function(next) {
-//   var connect = require('connect'),
-//       server = connect();
-//   server.use(connect.static("public")).listen(process.env.PORT || 8000, next);
-// });
 
 gulp.task('style', function () {
   return gulp.src(paths.style)
@@ -41,11 +36,17 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('public/fonts'));
 });
 
+gulp.task('rss', function () {
+  return gulp.src(paths.rss)
+    .pipe(gulp.dest('public'));
+});
+
 gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.style, ['style']);
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.fonts, ['fonts']);
+  gulp.watch(paths.rss, ['rss']);
 
   // var server = livereload();
   // gulp.watch('public/js/**/*.js').on('change', function(file) {
@@ -75,4 +76,10 @@ gulp.task('watch', function() {
   // });
 });
 
-gulp.task('default', ['scripts', 'style', 'images', 'fonts']);
+// gulp.task('server', function(next) {
+//   var connect = require('connect'),
+//       server = connect();
+//   server.use(connect.static("public")).listen(process.env.PORT || 8000, next);
+// });
+
+gulp.task('default', ['scripts', 'style', 'images', 'fonts', 'rss']);

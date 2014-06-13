@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Main Blog</title>
+    <link>http://cjohnson.io/words</link>
+    <description>Chris's main channel for blogs, words, and other weird thoughts</description>
+    <item>
+       <title>Anti-Tesla sentiment and the death of optimism (pt 1)</title>
+       <link>http://cjohnson.io/2014/tesla</link>
+       <description>In this post, I use game theory concepts to examine recent media stories about Tesla and how "negativity", broadly speaking, emerges in a post-capitalist, media-heavy culture </description>
+    </item>
+  </channel>
+</rss>
