@@ -8,6 +8,7 @@ var paths = {
   style: ['app/assets/style/**/*.scss'],
   fonts: ['app/assets/fonts/**'],
   images: ['app/assets/img/**'],
+  manifest: ['app/assets/posts/manifest.json'],
   rss: ['app/assets/feed.rss']
 };
 
@@ -41,12 +42,18 @@ gulp.task('rss', function () {
     .pipe(gulp.dest('public'));
 });
 
+gulp.task('manifest', function () {
+  return gulp.src(paths.manifest)
+    .pipe(gulp.dest('public/posts'));
+});
+
 gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.style, ['style']);
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.fonts, ['fonts']);
   gulp.watch(paths.rss, ['rss']);
+  gulp.watch(paths.manifest, ['manifest']);
 
   // var server = livereload();
   // gulp.watch('public/js/**/*.js').on('change', function(file) {
@@ -82,4 +89,4 @@ gulp.task('watch', function() {
 //   server.use(connect.static("public")).listen(process.env.PORT || 8000, next);
 // });
 
-gulp.task('default', ['scripts', 'style', 'images', 'fonts', 'rss']);
+gulp.task('default', ['scripts', 'style', 'images', 'fonts', 'rss', 'manifest']);
