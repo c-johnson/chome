@@ -5,18 +5,18 @@ define([
 ], function($, angular) {
   angular.module('chome', ['ui.router'])
   .config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
-    $stateProvider
-      .state("state-0", {
-        url: "/s0",
-        template: "State 0 !!!"
-        // templateUrl: "funnel/0.html"
-      })
-      .state("state-1", {
-        url: "/s1",
-        template: "State 1 ?!?"
-        // templateUrl: "funnel/1.html"
-      })
-    $locationProvider.html5Mode(true);
+    // $stateProvider
+    //   .state("state-0", {
+    //     url: "/s0",
+    //     template: "State 0 !!!"
+    //     // templateUrl: "funnel/0.html"
+    //   })
+    //   .state("state-1", {
+    //     url: "/s1",
+    //     template: "State 1 ?!?"
+    //     // templateUrl: "funnel/1.html"
+    //   })
+    // $locationProvider.html5Mode(true);
   }])
 
   /* Implement basic keyboard switching functionality */
