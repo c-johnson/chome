@@ -211,6 +211,16 @@
   },
   {
     "Title": "",
+    "Shortname": "houses",
+    "DateDisplay": "0001-01-01T00:00:00Z",
+    "DateCreated": "2014-06-09T10:10:03.971649867-07:00",
+    "DateUpdated": "0001-01-01T00:00:00Z",
+    "Public": true,
+    "Checksum": 0,
+    "Tags": null
+  },
+  {
+    "Title": "",
     "Shortname": "robots-1",
     "DateDisplay": "0001-01-01T00:00:00Z",
     "DateCreated": "2014-06-09T10:10:03.971649867-07:00",
