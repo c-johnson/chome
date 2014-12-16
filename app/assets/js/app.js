@@ -1,7 +1,8 @@
 define([
   'jquery',
   'angular',
-  'ui-router'
+  'ui-router',
+  'components/subnav'
 ], function($, angular) {
   angular.module('chome', ['ui.router'])
   .config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
