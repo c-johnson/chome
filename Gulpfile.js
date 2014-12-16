@@ -2,14 +2,14 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
 
-
 var paths = {
   scripts: ['app/assets/js/**/*.js'],
   style: ['app/assets/style/**/*.scss'],
   fonts: ['app/assets/fonts/**'],
   images: ['app/assets/img/**'],
   manifest: ['app/assets/posts/manifest.json'],
-  rss: ['app/assets/feed.rss']
+  rss: ['app/assets/feed.rss'],
+  files: ['app/assets/files/**'],
 };
 
 gulp.task('scripts', function () {
@@ -30,6 +30,11 @@ gulp.task('style', function () {
 gulp.task('images', function () {
   return gulp.src(paths.images)
     .pipe(gulp.dest('public/img'));
+});
+
+gulp.task('files', function () {
+  return gulp.src(paths.files)
+    .pipe(gulp.dest('public/files'));
 });
 
 gulp.task('fonts', function () {
@@ -53,7 +58,10 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.fonts, ['fonts']);
   gulp.watch(paths.rss, ['rss']);
+  gulp.watch(paths.files, ['files']);
   gulp.watch(paths.manifest, ['manifest']);
+
+  gulp.start('default');
 
   // var server = livereload();
   // gulp.watch('public/js/**/*.js').on('change', function(file) {
@@ -89,4 +97,4 @@ gulp.task('watch', function() {
 //   server.use(connect.static("public")).listen(process.env.PORT || 8000, next);
 // });
 
-gulp.task('default', ['scripts', 'style', 'images', 'fonts', 'rss', 'manifest']);
+gulp.task('default', ['scripts', 'style', 'images', 'fonts', 'rss', 'manifest', 'files']);

@@ -1,0 +1,147 @@
+Christopher Keith Johnson
+
+6504 NW Platte Hills Rd
+Kansas City, MO, 64152
+415.494.1224
+chris@cjohnson.io
+
+SUMMARY:
+  I'm a software engineer with 6 years of web development experience. I do full-stack web development, including UX design, implementation, and deployment. I design in Photoshop, write semantic HTML5 and SASS, code various flavors of Javascript (both Angular and Ember), and have developed RESTful APIs in almost every modern web framework (see below). I have a rudimentary understanding of the web stack, all the way from the transport layer, to HTTP standards / REST architecture, to basic web security principles (OWASP top 10-type stuff).  I specialize in front-end development, typically using routed services with Angular or vanilla javascript/jQuery when the situation calls for it.
+
+  Software should accomplish measurable business goals. As such, software development is only a piece of the puzzle to managing an effective, profitable business. I believe that everything about software design, from the user interface to long-term architecture decisions, should be informed and shaped by the needs of the business and the demands of its consumers.
+
+EXPERIENCE:
+  :: Freelance web developer
+    - Position:  Owner
+    - When:  Summer 2010 - Present
+    - Summary:
+      I run a small freelance web design and development business. I handle business and development tasks and work with a professional graphic designer, although my design skills are improving.  Some of my work includes:
+      - Gain Fitness (2014)
+        https://trainer.gainfitness.com
+      - World Energy Project (2011)
+        http://cjohnson.io/wep
+      - Magnolia Metal Inc. (2011)
+        http://www.magnoliabronze.com
+      - Premier Parking Services, Inc. (2010)
+        http://www.premier-parking.com
+
+  :: LocBox, Inc    
+    - Position:  Lead front-end engineer
+    - When:  February 2013 to February 2014
+    - Summary:
+      As a startup of 12 employees, Locbox required me to fill many different roles with zero training or experience.  While I spent most of my time as a front-end engineer, I wore several hats including product designer, project manager, backend engineer, and devops guy.
+    - Tasks:
+      - Converted most of our application from a Rails, form-based application to an EmberJS-powered client-driven app
+      - Re-wrote the marketing site (www.locbox.com) to be fully responsive and communicate our message more clearly
+      - Re-wrote the internal analytics system using MongoDB to an event-based analytics system
+      - Re-factored a large codebase of CSS, JS, and HTML into a robust, well-architected codebase
+        - Inherited 2 years of front-end code written by contractors, past employees, and the CEO
+      - Re-wrote all front-end code (html, css, and js) to serve landing pages for our marketing campaigns (Locbox's bread-and-butter)
+        - Required substantial attention to performance, accessibility, and cross-browser compatibility (IE8)
+        - Responsive across all major devices and browsers
+      - Substantially contributed to product design and management
+        - Originated several new features based off of feedback from sales, support, and executive departments
+        - Spec'd, designed, iterated, managed, fought for, and implemented these features.
+     Tools:
+      - Ruby on Rails, Sinatra, Node.js
+      - HTML/CSS/Javascript, SASS, Bootstrap, Responsive design
+      - Ember.js
+
+  :: Won $50,000 tradeking api challenge
+    - Position:  Team lead, developer
+    - When:  Spring 2012
+    - Summary:  Won the national $50,000 prize for our three-part application that uses Tradeking’s brokerage API.  
+    - Tasks:
+      - The first part is a chrome extension that scans a web page for stock symbols. When it finds a stock symbol, it inserts a widget displaying the current stock price and an overlay with a stock graph, some financial information, and the ability to buy the stock right in the browser window. 
+      - The second part is a cloud-based notification service that alerts you whenever a stock drops in price, breaks a moving average, or some other event occurs. Notifications are received on the browser extension and on the mobile application.
+      - The third part is an android application that displays notifications and lets the user set notifications on stock movements.
+    - Tools:  HTML/CSS/Javascript, Java EE
+
+  :: State Studios
+    - Position:  Founder, project manager, lead architect
+    - When:  August 2012 to December 2012
+    - Summary: 
+      Conceived an idea for a product called Marketboard; a CRM and reporting tool with specialized functionality for investment advisors, including the ability to trade stocks through multiple online brokerage APIs and monitor a portfolio’s performance. 
+    - Tasks:
+      - As project manager, I led a team of 4 skilled software developers (+1 marketing guru) through business model generation and product development
+        - Applied a “mostly scrum" process, involving daily standups, user story / task metaphors for issue tracking, and iterative 1-2 week sprints with continuous feedback.
+        - Guided market research efforts and translated results to actionable backlog items. Activities include researching competitors, analyzing market segments (based off of features, pricing, market position, customer book size, and investment vehicle type), and summarizing these results for presentations and internal analysis
+      - As lead developer / architect, I worked on front-end and back-end components
+        - Managed several aspects of the backend / development environment, including the build process, testing, and deployment automation, as well as security, authentication, and database migrations. 
+        - Architected a custom dependency injection / inversion of control container to distribute our various services concurrently. 
+        - Wrote a templating engine that inserts custom data fields into a Microsoft Word document, then exports to a PDF. 
+    - Tools: C# on ASP.NET, HTML/CSS/Javascript, Java EE
+
+  :: Nelnet, Inc
+    - Position:  Lead engineer
+    - When: Fall 2011 to Spring 2012
+    - Summary:  Developed a web application that allows users to log activities, like exercising or eating healthy foods, which count toward company-offered “challenges”. Users gain points from completing challenges which can be redeemed for money in a company’s health insurance deductible pool. 
+    - Tasks:
+      - Developed much of the database architecture, which used WCF and Entity Framework
+      - Designed and architected several major components of the system, including the entire “challenge” component, the login system, and the activity / challenge matching algorithm. 
+      - I implemented many client-side components and pages, which includes the design, HTML/CSS, AJAX interaction, MVC controller, and the interfaces to the data layer.
+      - I was in charge of the front-end page lifecycle, including caching,
+      - I managed the build cycle, testing, and deployment workflow. 
+    - Tools:  C# on ASP.NET, HTML/CSS/Javascript, responsive design
+
+  :: Parking Carnac (Don't Panic Labs)
+    - Position:  Founder, Full-stack engineer
+    - When:  Summer 2011
+    - Summary: 
+      - Wrote a computer vision application that takes video feed from parking lots and determines if spots are empty or occupied. Used naïve Bayesian classifiers, k-nn classifiers, and boosting. 
+      - Designed mobile and web clients to route users to parking lots with open spots in the area. Guided the user to available parking near a particular location, venue, or event. 
+      - Attempted to develop a sustainable business model with this software. Decided to not pursue the project. 
+    - Tools:  OpenCV, C# on ASP.NET, HTML/CSS/Javascript
+
+  :: UNL Economics Department
+    - Position:  Software consultant
+    - When:  Spring 2011
+    - Summary:  Built a software system that parses Current Population Survey (CPS) data and matches survey correspondents across years using demographic identifiers. CPS data is downloaded from a web service, unzipped, and then parsed together using several incomplete header files that are cross-referenced for veracity. Once the data has been read into the database, the software then constructs cohort tables of labor transition rates to analyze a cohort’s overall expected employable lifespan. Also co-authored a research paper about our findings. Wrote the portion on how to obtain, sanitize, and process the data, as well as our methods for boosting the accuracy of matches using demographic identifiers. 
+    - Tools:  Java, MySQL
+
+  :: Software Developer Intern at Nanonation, Inc.
+    - Position:  Software developer
+    - When:  Summer 2010
+    - Summary:  Delivered an application that aggregates diagnostic information (hardware specs, device status and available services) about client machines on a network, and determines an overall “health” score for each machine. Developed a Silverlight GUI which displays this information in a consumable manner, with color-codes for each machine and the ability to sort by health scores. 
+    - Technologies used:  C#, Silverlight, WMI
+
+EDUCATION: 
+  - Finished 3.5 years at University of Nebraska-Lincoln in the "Raikes" honors program
+    - Honors program with emphasis on computer science, business, and leadership
+    - Cumulative GPA: 3.307
+    - Did not graduate with a degree
+    - Coursework:
+      - C++/Java object-oriented programming
+      - Data structures, algorithms, discrete logic
+      - Web development with multi-tiered architectures (PHP/MySQL, Java EE)
+
+ACTIVITIES:
+  - President, Association for Computing Machinery (ACM-UNL)
+    - When:  2009-2012
+    - As president, I helped organize Nebraska Code Camp, a software development focusing on new software development technologies and practices
+    - www.nebraskacodecamp.com
+  - World Energy Project                
+    - When:  2010-2012
+    - Ran website and IT infrastructure for the World Energy Project, a nonprofit that sends engineers to communities in Africa to install isolated energy systems.   
+
+SKILLS:
+  Good
+    - HTML, CSS, and Javascript
+      - Specifically, HTML5, CSS3, and Ember.js
+      - SASS preprocessor w/ Compass
+      - Bower, grunt, bootstrap, jQuery, etc.
+      - Responsive design
+    - Web fundamentals, REST-style architecture
+    - Product and UX design
+
+  Okay
+    - Unix (bash), basic devops concepts
+    - Design concepts / Photoshop
+    - MySQL
+    - Angular.js
+    - Ruby on Rails
+    - C#, ASP.NET
+
+  Minor experience
+    - Golang
+    - Java EE
