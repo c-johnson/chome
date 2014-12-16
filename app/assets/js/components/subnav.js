@@ -14,9 +14,12 @@ define(["jquery"], function() {
 
   Subnav.prototype.register = function () {
     $(this.switcher).on('click', 'a', function (evt) {
-      var sectionID = $(evt.target).attr('href');
-      this.displaySection(sectionID);
-      evt.preventDefault();
+      var $target = $(evt.target);
+      if ($target.data('external') === undefined) {
+        var sectionID = $target.attr('href');
+        this.displaySection(sectionID);
+        evt.preventDefault();
+      }
     }.bind(this));
   };
 
