@@ -36,15 +36,20 @@ hr {
 }
 
 .disclaimer {
-  padding: $top-dist 4rem 56px 0;
+  padding: 1rem 1rem 4rem;
+  margin-left: 14px;
+  margin-right: -1rem;
   border-top: 1px solid $lightGray;
   border-right: 1px solid $lightGray;
-  margin-left: 1rem;
   width: 65%;
 }
 
 .archive {
   padding: $top-dist 2rem 6rem 1rem;
+
+  img {
+    margin-right: 10px;
+  }
 
   ul {
     li {
@@ -64,10 +69,6 @@ hr {
   justify-content: space-between;
   align-items: baseline;
   margin: .7em 0;
-
-  a {
-    font-size: 2rem;
-  }
 
   aside {
     color: $gray;
