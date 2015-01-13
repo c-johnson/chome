@@ -5,6 +5,11 @@ Kansas City, MO, 64152
 415.494.1224
 chris@cjohnson.io
 
+Online:
+
+github.com/c-johnson
+cjohnson.io/work
+
 SUMMARY:
   I'm a software engineer with 6 years of web development experience. I do full-stack web development, including UX design, implementation, and deployment. I design in Photoshop, write semantic HTML5 and SASS, code various flavors of Javascript (both Angular and Ember), and have developed RESTful APIs in almost every modern web framework (see below). I have a rudimentary understanding of the web stack, all the way from the transport layer, to HTTP standards / REST architecture, to basic web security principles (OWASP top 10-type stuff).  I specialize in front-end development, typically using routed services with Angular or vanilla javascript/jQuery when the situation calls for it.
 
@@ -71,6 +76,13 @@ EXPERIENCE:
         - Architected a custom dependency injection / inversion of control container to distribute our various services concurrently. 
         - Wrote a templating engine that inserts custom data fields into a Microsoft Word document, then exports to a PDF. 
     - Tools: C# on ASP.NET, HTML/CSS/Javascript, Java EE
+
+  :: VMWare, Inc, Springsource division
+    - Position:  Software Engineering Intern
+    - When: Summer 2012
+    - Summary:  I worked on a project called Scripted, a web-focused code editor that lives in the browser.  I worked on the front-end, mostly writing client-side JavaScript, implementing components in HTML/CSS, and managing the navigation / flow of the application. I was involved in product design, development, and planning.  I conceived of and implemented significant components of the product, including the secondary code editor, help menu / keybinding editor, several navigation components, and the file history, as well as many others.
+    - See also:  https://github.com/scripted-editor/scripted
+    - Tools:  Javascript. HTML, CSS, node.js
 
   :: Nelnet, Inc
     - Position:  Lead engineer
